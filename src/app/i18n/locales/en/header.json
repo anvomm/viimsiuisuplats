@@ -1,7 +1,11 @@
 {
-    "languages": {
-      "est": "Estonian",
-      "en": "English",
-      "ru": "Russian"
-    }
+  "languages": {
+    "est": "Estonian",
+    "en": "English",
+    "ru": "Russian"
+  },
+  "menu": {
+    "news": "News",
+    "about": "About"
   }
+}

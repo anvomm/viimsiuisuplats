@@ -1,9 +1,19 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-export default function Home() {
+import { Hero } from "../layout/Hero";
+import { AboutSection } from "../layout/AboutSection";
+import { NewsSection } from "../layout/NewsSection";
+
+interface Props {
+  params: { lng: string };
+}
+
+export default function Home({ params: { lng } }: Props) {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      
+    <main>
+      <Hero lng={lng} />
+      <AboutSection lng={lng} />
+      <NewsSection lng={lng} />
     </main>
-  )
+  );
 }

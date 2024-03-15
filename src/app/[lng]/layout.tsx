@@ -5,10 +5,10 @@ import { languages } from "../i18n/settings";
 
 import { Header } from "../components/Header";
 
-import { Inter } from "next/font/google";
+import { Raleway } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const raleway = Raleway({ subsets: ["latin", "cyrillic"] });
 
 interface Props {
   children: React.ReactNode;
@@ -30,7 +30,7 @@ export async function generateStaticParams() {
 export default function RootLayout({ children, params: { lng } }: Props) {
   return (
     <html lang={lng} dir={dir(lng)}>
-      <body className={inter.className}>
+      <body className={`${raleway.className} bg-[#dce3e8]`}>
         <Header lng={lng} />
         {children}
       </body>
