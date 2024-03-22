@@ -16,7 +16,7 @@ const pattaya = Pattaya({ subsets: ["latin", "cyrillic"], weight: "400" });
 
 export const Hero = ({ lng }: Props): JSX.Element => {
   const [needToupdate, setNeedToUpdate] = useState<boolean>(false);
-  const [lang, setLang] = useState<string>("");
+  const [lang, setLang] = useState<string>(""); 
 
   useEffect(() => {
     setLang(lng);
@@ -25,7 +25,7 @@ export const Hero = ({ lng }: Props): JSX.Element => {
   useEffect(() => {
     if (lng !== lang) {
       setNeedToUpdate(!needToupdate);
-      setLang(lng)
+      setLang(lng);
     }
   }, [lng]);
 

@@ -1,0 +1,9 @@
+{
+  "button": "Toeta meid",
+  "title": "Meie algatust saad toetada tehes ülekannet arvele:",
+  "recipient": "Saaja",
+  "number": "Konto number",
+  "description": "Selgitus",
+  "copy": "kopeeri",
+  "copy-clicked": "kopeeritud!"
+}

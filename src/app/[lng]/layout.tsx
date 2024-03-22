@@ -4,6 +4,7 @@ import { dir } from "i18next";
 import { languages } from "../i18n/settings";
 
 import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 
 import { Raleway } from "next/font/google";
 import "./globals.css";
@@ -33,6 +34,7 @@ export default function RootLayout({ children, params: { lng } }: Props) {
       <body className={`${raleway.className} bg-[#dce3e8]`}>
         <Header lng={lng} />
         {children}
+        <Footer lng={lng} />
       </body>
     </html>
   );

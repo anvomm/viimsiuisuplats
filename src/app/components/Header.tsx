@@ -7,6 +7,8 @@ import { Dropdown, MenuButton, Menu, MenuItem } from "@mui/base";
 
 import { useTranslation } from "../i18n/client";
 
+import { SupportButton } from "./SupportButton";
+
 import logo from "../../../public/logo.png";
 import langLogo from "../../assets/images/language.png";
 import est from "../../assets/svgs/est.svg";
@@ -22,19 +24,28 @@ export const Header = ({ lng }: Props): JSX.Element => {
   return (
     <header className="bg-[#077ed9] h-[100px] px-10 flex items-center justify-between">
       <Image src={logo} alt="logo" width={200} height={53} />
-      <div className="flex gap-[40px]">
-        <Link
-          className="text-lg text-white font-semibold hover:text-[#F7D65A]"
-          href={"/#about"}
-        >
-          {t("menu.about")}
-        </Link>
-        <Link
-          className="text-lg text-white font-semibold hover:text-[#F7D65A]"
-          href={"/#news"}
-        >
-          {t("menu.news")}
-        </Link>
+      <div className="w-[60%] flex justify-between items-center">
+        <SupportButton lng={lng} />
+        <div className="flex gap-[40px] items-center">
+          <Link
+            className="text-lg text-white font-semibold hover:text-[#F7D65A]"
+            href={"/#about"}
+          >
+            {t("menu.about")}
+          </Link>
+          <Link
+            className="text-lg text-white font-semibold hover:text-[#F7D65A]"
+            href={"/#news"}
+          >
+            {t("menu.news")}
+          </Link>
+          <Link
+            className="text-lg text-white font-semibold hover:text-[#F7D65A]"
+            href={"/#contacts"}
+          >
+            {t("menu.contacts")}
+          </Link>
+        </div>
       </div>
       <Dropdown>
         <MenuButton>
