@@ -14,6 +14,7 @@ export const MysteriousText: React.FC<{ children: string, lngChanged: boolean }>
 
   const animation = (i: number) =>
     useSpring({ opacity: 1, from: { opacity: 0 }, delay: Math.random() * 350 });
+    
   return (
     <>
       {children.split("").map((item, index) => (

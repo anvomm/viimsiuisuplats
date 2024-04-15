@@ -12,11 +12,13 @@ import facebook from "../../assets/svgs/facebook.svg";
 import instagram from "../../assets/svgs/instagram.svg";
 import linkedin from "../../assets/svgs/linkedin.svg";
 import twitter from "../../assets/svgs/twitter.svg";
-import { pattaya } from "@/utils/fonts";
+import { Pattaya } from "next/font/google";
 
 interface Props {
   lng: string;
 }
+
+const pattaya = Pattaya({ subsets: ["latin", "cyrillic"], weight: "400" });
 
 export const Footer = ({ lng }: Props): JSX.Element => {
   const { t } = useTranslation(lng, "footer");
@@ -36,6 +38,7 @@ export const Footer = ({ lng }: Props): JSX.Element => {
         </Link>
         <div className="flex items-center gap-3">
           <Link
+            className="transition-all hover:scale-110 hover:drop-shadow-xl"
             href={"https://www.facebook.com/profile.php?id=61552853031563"}
             target="_blank"
             rel="noopener noreferrer"
@@ -43,6 +46,7 @@ export const Footer = ({ lng }: Props): JSX.Element => {
             <Image src={facebook} width={40} alt="facebook logo" />
           </Link>
           <Link
+            className="transition-all hover:scale-110 hover:drop-shadow-xl"
             href={"https://www.instagram.com/uisuplats/"}
             target="_blank"
             rel="noopener noreferrer"
@@ -50,6 +54,7 @@ export const Footer = ({ lng }: Props): JSX.Element => {
             <Image src={instagram} width={40} alt="instagram logo" />
           </Link>
           <Link
+            className="transition-all hover:scale-110 hover:drop-shadow-xl"
             href={"https://twitter.com/ViimsiUisuplats"}
             target="_blank"
             rel="noopener noreferrer"
@@ -57,6 +62,7 @@ export const Footer = ({ lng }: Props): JSX.Element => {
             <Image src={twitter} width={34} alt="twitter logo" />
           </Link>
           <Link
+            className="transition-all hover:scale-110 hover:drop-shadow-xl"
             href={"https://www.linkedin.com/in/viimsi-uisuplats-0632ba2b5/"}
             target="_blank"
             rel="noopener noreferrer"
@@ -75,7 +81,7 @@ export const Footer = ({ lng }: Props): JSX.Element => {
         <li>
           {t("email")}:{" "}
           <Link
-            className="text-[#030733]"
+            className="text-[#030733] text-lg"
             href={"mailto:info@viimsiuisuplats.ee"}
           >
             info@viimsiuisuplats.ee

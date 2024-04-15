@@ -7,4 +7,7 @@ export const pattaya = Pattaya({
   variable: "--font-pattaya",
 });
 
-export const raleway = Raleway({ subsets: ["latin", "cyrillic"] });
+export const raleway = Raleway({
+  subsets: ["latin", "cyrillic"],
+  display: "swap",
+});

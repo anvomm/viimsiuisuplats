@@ -12,11 +12,13 @@ import { NewsCard } from "../components/NewsCard";
 
 import { news } from "@/data/news";
 
-import { pattaya } from "@/utils/fonts";
+import { Pattaya } from "next/font/google";
 
 interface Props {
   lng: string;
 }
+
+const pattaya = Pattaya({ subsets: ["latin", "cyrillic"], weight: "400" });
 
 export const NewsSection = ({ lng }: Props): JSX.Element => {
   const { t } = useTranslation(lng, "news");

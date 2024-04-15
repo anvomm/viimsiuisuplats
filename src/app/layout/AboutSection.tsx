@@ -6,11 +6,14 @@ import { useSpring, animated } from "react-spring";
 import { useTranslation } from "../i18n/client";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
-import { pattaya } from "@/utils/fonts";
+/* import { pattaya } from "@/utils/fonts"; */
+import { Pattaya } from "next/font/google";
 
 interface Props {
   lng: string;
 }
+
+const pattaya = Pattaya({ subsets: ["latin", "cyrillic"], weight: "400" });
 
 export const AboutSection = ({ lng }: Props): JSX.Element => {
   const { t } = useTranslation(lng, "about");
