@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { useTranslation } from "../i18n/client";
 
 import logo from "../../../public/logo.png";
+import logoSmall from "../../../public/logo-small.png";
 import facebook from "../../assets/svgs/facebook.svg";
 import instagram from "../../assets/svgs/instagram.svg";
 import linkedin from "../../assets/svgs/linkedin.svg";
@@ -31,10 +32,13 @@ export const Footer = ({ lng }: Props): JSX.Element => {
   }, []);
 
   return (
-    <footer className="bg-[#077ed9] pt-10 pb-2 px-10 relative z-20">
+    <footer className="bg-[#077ed9] pt-7 pb-2 px-10 relative z-20 sm:pt-10">
       <div className="flex justify-between mb-8">
-        <Link href={"/"} className="inline-block">
+        <Link href={"/"} className="hidden sm:inline-block">
           <Image src={logo} alt="logo" width={200} height={53} />
+        </Link>
+        <Link href={"/"} className="inline-block sm:hidden">
+          <Image src={logoSmall} alt="logo" width={50} height={50} />
         </Link>
         <div className="flex items-center gap-3">
           <Link
@@ -73,7 +77,7 @@ export const Footer = ({ lng }: Props): JSX.Element => {
       </div>
       <h2
         id="contacts"
-        className={`${pattaya.className} text-[28px] text-center mb-3`}
+        className={`${pattaya.className} text-2xl text-center mb-3 sm:text-3xl md:text-[28px]`}
       >
         {t("title")}
       </h2>
@@ -81,14 +85,14 @@ export const Footer = ({ lng }: Props): JSX.Element => {
         <li>
           {t("email")}:{" "}
           <Link
-            className="text-[#030733] text-lg"
+            className="text-[#030733] text-base sm:text-lg"
             href={"mailto:info@viimsiuisuplats.ee"}
           >
             info@viimsiuisuplats.ee
           </Link>
         </li>
       </ul>
-      <p className="text-right">
+      <p className="text-xs text-right sm:text-sm">
         © <span id="year"></span> Viimsi Uisuplats. All rights reserved.
       </p>
     </footer>

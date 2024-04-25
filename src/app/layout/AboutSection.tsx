@@ -35,10 +35,14 @@ export const AboutSection = ({ lng }: Props): JSX.Element => {
   return (
     <section
       id="about"
-      className="px-10 pt-[50px] text-lg text-medium text-center"
+      className="px-10 pt-[30px] text-sm text-medium text-center sm:pt-[50px] sm:text-base md:text-lg"
       ref={aboutTriggerRef}
     >
-      <h2 className={`${pattaya.className} text-4xl mb-6`}>{t("title")}</h2>
+      <h2
+        className={`${pattaya.className} text-2xl mb-6 sm:text-3xl md:text-4xl`}
+      >
+        {t("title")}
+      </h2>
       <animated.div style={aboutStyle} className="relative">
         <p>
           ViimsiUisuplats on ilmunud tänu kohalike elanike initsiatiivile. Antud

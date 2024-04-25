@@ -39,15 +39,17 @@ export const NewsSection = ({ lng }: Props): JSX.Element => {
   });
 
   return (
-    <section id="news" className="py-[80px]" ref={newsTriggerRef}>
-      <h2 className={`${pattaya.className} text-4xl text-center mb-6`}>
+    <section id="news" className="py-[40px] sm:py-[80px]" ref={newsTriggerRef}>
+      <h2
+        className={`${pattaya.className} text-2xl text-center mb-6 sm:text-3xl md:text-4xl`}
+      >
         {t("title")}
       </h2>
-      <ul className="flex flex-col items-center gap-6">
+      <ul className="flex flex-col items-center gap-6 text-sm sm:text-base">
         {news.map((post: News) => (
           <animated.li
             style={newsStyle}
-            className="w-1/2 p-5 bg-white rounded-lg shadow-xl relative"
+            className="w-4/6 p-3 bg-white rounded-lg shadow-xl relative sm:p-5 sm:w-1/2"
             key={post.id}
           >
             <NewsCard post={post} />
