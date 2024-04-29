@@ -20,7 +20,8 @@
     "react-cookie": "^7.1.0",
     "react-dom": "^18",
     "react-i18next": "^14.0.5",
-    "react-spring": "^9.7.3"
+    "react-spring": "^9.7.3",
+    "react-type-animation": "^3.2.0"
   },
   "devDependencies": {
     "@types/node": "^20",
