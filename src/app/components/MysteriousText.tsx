@@ -12,13 +12,10 @@ export const MysteriousText: React.FC<{ children: string, lngChanged: boolean }>
     setNeedToUpdate(!needToupdate);
   }, [lngChanged]);
 
-  const animation = (i: number) =>
-    useSpring({ opacity: 1, from: { opacity: 0 }, delay: Math.random() * 350 });
-    
   return (
     <>
       {children.split("").map((item, index) => (
-        <animated.span key={index} style={animation(index)}>
+        <animated.span key={index} style={useSpring({ opacity: 1, from: { opacity: 0 }, delay: Math.random() * 350 })}>
           {item}
         </animated.span>
       ))}
