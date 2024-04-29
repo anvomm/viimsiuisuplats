@@ -78,7 +78,7 @@ export const SupportModal = ({
       <div className="flex items-center justify-between mb-[50px]">
         <div className="w-4/6 flex flex-col gap-2 text-sm sm:text-base">
           <p className="font-semibold">{t("description")}:</p>
-          <p>annetus Viimsi uisuväljaku rajamiseks</p>
+          <p>annetus Viimsi uisuplatsi rajamise toetamiseks</p>
         </div>
         <button
           className="rounded py-2 px-2 copy-btn sm:px-6"
