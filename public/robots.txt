@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://viimsiuisuplats.ee
+
+# Sitemaps
+Sitemap: https://viimsiuisuplats.ee/sitemap.xml
